@@ -3,10 +3,9 @@
 </div>
 
 <div class="container">
-    <div id="chararter">
-        <table class="table warning">
+        <table class="table">
           <thead>
-            <tr class="table-warning text-center">
+            <tr class="table emcabezado text-center">
               <th scope="col">N°</th>
               <th scope="col">NOMBRE</th>
               <th scope="col">LOCATION</th>
@@ -15,14 +14,30 @@
           </thead>
           <tbody>
             <% @character.each do |character| %>
-            <tr class="table-warning">
+              <tr class="table">
                 <td><%= character.id %></td>
                 <td><%= character.name %></td>
                 <td><%= character.location %></td>
-                <td><%= character.house %></td>
+                <% case character.house %>
+                  <% when "Gryffindor"%>
+                    <td> <%= image_tag("Gryffindor.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                  <% when "Hufflepuff"%>
+                    <td> <%= image_tag("hufflepuff.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                  <% when "Pukwudgie"%>
+                    <td> <%= image_tag("Pukwudgie.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                  <% when "Ravenclaw"%>
+                    <td> <%= image_tag("Ravenclaw.jpg", alt: ccharacter.house, title: character.house, height:130, width:80)%>
+                  <% when "Slytherin"%>
+                    <td> <%= image_tag("Slytherin.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                  <% when "Thunderbird"%>
+                    <td> <%= image_tag("Thunderbird.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                  <% when "Wampus"%>
+                  <td> <%= image_tag("Wampus.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                  <% else %>
+                    <td> <%= image_tag("otracasa.jpg", alt: character.house, title: character.house, height:130, width:80)%>
+                <% end %>
               </tr>
             <% end %>
           </tbody>
         </table>
-      </div>
 </div>
