@@ -1,0 +1,28 @@
+<div class="title">
+    <h1 class= "text-center">HOWARTS</h1>
+</div>
+
+<div class="container">
+    <div id="chararter">
+        <table class="table warning">
+          <thead>
+            <tr class="table-warning text-center">
+              <th scope="col">N°</th>
+              <th scope="col">NOMBRE</th>
+              <th scope="col">LOCATION</th>
+              <th scope="col">HOUSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @character.each do |character| %>
+            <tr class="table-warning">
+                <td><%= character.id %></td>
+                <td><%= character.name %></td>
+                <td><%= character.location %></td>
+                <td><%= character.house %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+</div>

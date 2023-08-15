@@ -1,0 +1,14 @@
+* {
+    font-family: 'Harry Potter', sans-serif;
+}
+body{
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.title{
+    
+    color: white;
+    font: bold;
+    margin: 20px 0 20px 0;
+}
